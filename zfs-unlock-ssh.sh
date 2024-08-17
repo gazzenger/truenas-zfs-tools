@@ -26,7 +26,7 @@ for dataset in "${datasets[@]}"; do
     read -s -p "Enter passphrase for dataset $dataset: " PASS
     echo
     echo -n "Unlocking $dataset..."
-    ssh $SSH_USER@$SSH_HOST "midclt call pool.dataset.unlock \"${dataset}\" \"{\\\"datasets\\\": [{\\\"name\\\": \\\"${dataset}\\\",\\\"passphrase\\\": \\\"${PASS}\\\"}]}\" &> /dev/null"
+    ssh $SSH_USER@$SSH_HOST "midclt call pool.dataset.unlock \"${dataset}\" \"{\\\"datasets\\\": [{\\\"name\\\": \\\"${dataset}\\\",\\\"passphrase\\\": \\\"\"'${PASS}'\"\\\"}]}\" &> /dev/null"
   fi
 
 # Sleep 5s before checking if it is unlocked
