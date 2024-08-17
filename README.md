@@ -1,6 +1,6 @@
 ## ZFS-Unlock-SSH
 
-This tool is adapted to allow unlocking a Truenas ZFS dataset encrypted by a passphrase.
+This tool is adapted to allow unlocking a Truenas ZFS dataset encrypted by a passphrase via SSH.
 
 Ensure the user has already been configured for SSH access via public/private key pairs with the Truenas Instance.
 
