@@ -19,4 +19,11 @@ You must provide a .env file containing the following
 
 When the command is run the datasets are looped over, and the passphrase is used for unlocking or locking the dataset.
 
+## Task-Checker
+This script is to be run on a TrueNAS server for checking if the server is running any tasks, or has any SSH sessions current.
+
+Use this in conjunction with cron tasks to perform things such as shutdowns.
+```bash
+$ $(/.../task-checker.sh) && $(shutdown -h now)
+```
 
