@@ -4,7 +4,7 @@
 # If there are no ssh connections or running tasks, exit code is 0, otherwise exit code is 1
 # Note that running tasks would include the CRON task itself running, so the number must be GT 1
 
-SSH_CONS=$(ps x | grep 'sshd:' | grep -v 'grep' | wc -l)
+SSH_CONS=$(ps x | grep 'sshd:' | grep -v -e 'grep' -e 'listener' | wc -l)
 RUNNING_TASKS=$(midclt call core.get_jobs "[[\"state\",\"=\",\"RUNNING\"]]" | jq length)
 
 if [ "$SSH_CONS" -gt 0 ] || [ "$RUNNING_TASKS" -gt 1 ]
