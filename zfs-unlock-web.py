@@ -95,9 +95,9 @@ lock_payload = {
 unlock_payload = {
     'id': dataset,
     'unlock_options': {
-        'key_file': False,
-        'recursive': True,
-        'toggle_attachments': False,
+        #'key_file': False,
+        #'recursive': True,
+        #'toggle_attachments': False,
         'datasets': [
             { 
                 'name' : dataset,
